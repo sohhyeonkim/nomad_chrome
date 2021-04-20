@@ -5,6 +5,11 @@ const $todoForm = document.querySelector(".js-todoForm"),
 
 let TodoArr = [];
 
+function showUnderline(event){
+    const clickedCheckBox = event.target;
+    const finishedSpan = clickedCheckBox.nextSibling;
+    finishedSpan.classList.add("done");
+}
 
 function deleteToDo(event){
     const clickedBtn = event.target;
@@ -29,6 +34,8 @@ function printInput(text){
     const $li = document.createElement("li");
     const $btn = document.createElement("button");
     const $span = document.createElement("span");
+    const $check = document.createElement("input");
+    $check.type = "checkbox";
     idNumbers++;
     //const newId = TodoArr.length+1;
 
@@ -36,10 +43,12 @@ function printInput(text){
     $span.innerText = text;
     $li.id = idNumbers;
 
-    $li.appendChild($btn);
     $li.appendChild($span);
+    $li.appendChild($btn);
+    $li.prepend($check);
     $todoList.appendChild($li);
     $btn.addEventListener("click",deleteToDo);
+    $check.addEventListener("click",showUnderline);
 
     const TodoObj = {
         text: text,
@@ -72,5 +81,6 @@ function loadTodo(){
 function init(){
     loadTodo();
     $todoForm.addEventListener("submit",handleSubmit);
+   
 }
 init();

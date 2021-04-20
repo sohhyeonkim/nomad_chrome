@@ -16,7 +16,7 @@ function loadName(){
     function getUser(event){
         event.preventDefault();
         localStorage.setItem("currentUser",$input.value);
-        $userName.innerText = `Welcome, ${$input.value}`;
+        $userName.innerText = `Welcome, ${$input.value}!`;
         $form.classList.remove("showForm");
         $form.classList.add("js-form");
     }
@@ -33,7 +33,7 @@ function loadName(){
     //현재 localStorage의 currentUser에 할당된 값이 있다면
     else
     {
-        $userName.innerText = `Hello, ${$currentUser}`;
+        $userName.innerText = `Welcome, ${$currentUser}`;
         
     }
     

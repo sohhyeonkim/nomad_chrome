@@ -1,13 +1,9 @@
+*{margin:0; padding:0; box-sizing: border-box;}
+
 body{
     background-color: #7f8c8d;
 }
-form.js-form{
-    display:none;
-}
-.showForm{
-    display:block;
-}
-
+/*배경화면*/
 @keyframes fadeIn {
     from{
         opacity:0;
@@ -24,4 +20,84 @@ form.js-form{
     height:100%;
     z-index: -1;
     animation: fadeIn .3s linear;
+}
+p.js-weather{
+    padding-top:5px;
+    padding-right:15px;
+    text-align:right;
+}
+section.wrap{
+    width:60%;
+    height:700px;
+    /* border:3px solid red; */
+    margin:0 auto;
+    padding-top:50px;
+    padding-bottom:50px;
+    text-align:center;
+}
+
+/*시계*/
+.js-clock{
+    width:auto;
+    height:auto;
+    /* border:3px solid red; */
+}
+.js-clock h1{
+    font-size:120px;
+    font-weight: 100;
+    color:white;
+}
+
+/*공통 인풋창*/
+input[type=text]{
+    width:250px;
+    padding:10px 5px;
+    margin-top:20px;
+    border:none;
+    border-bottom: 2px solid white;
+    background-color:transparent;
+    text-align: center;
+    color:black;
+    font-size:1.3rem;
+}
+input::placeholder{
+    color:white;
+}
+
+
+/*사용자 이름 폼 영역*/
+form.js-form{
+    display:none;
+}
+.showForm{
+    display:block;
+}
+h1.userName{
+    margin-top:20px;
+    font-size:50px;
+    font-weight:100;
+    color:white;
+}
+
+
+/*todo list 폼 영역*/
+ul.js-todoList{
+    width:250px;
+    height:auto;
+    margin:0 auto;
+}
+ul.js-todoList li{
+    list-style-type: none;
+    text-align:left;
+    padding-top:7px;
+    padding-bottom:7px;
+}
+li button{
+    font-size:23px;
+    border:none;
+    background-color:transparent;
+    padding-right:10px;
+}
+li span{
+    font-size:20px;
 }

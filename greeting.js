@@ -16,7 +16,7 @@ function loadName(){
     function getUser(event){
         event.preventDefault();
         localStorage.setItem("currentUser",$input.value);
-        $userName.innerText = `Hello, ${$input.value}`;
+        $userName.innerText = `Welcome, ${$input.value}`;
         $form.classList.remove("showForm");
         $form.classList.add("js-form");
     }

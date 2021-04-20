@@ -8,7 +8,14 @@ let TodoArr = [];
 function showUnderline(event){
     const clickedCheckBox = event.target;
     const finishedSpan = clickedCheckBox.nextSibling;
+    if(finishedSpan.classList.contains("done"))
+    {
+        finishedSpan.classList.remove("done");
+    }
+    else
+    {
     finishedSpan.classList.add("done");
+    }
 }
 
 function deleteToDo(event){

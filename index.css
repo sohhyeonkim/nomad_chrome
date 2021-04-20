@@ -102,6 +102,7 @@ li button{
     background-color:transparent;
     padding-right:10px;
     float:right;
+    cursor:pointer;
 }
 li span{
     padding-left:10px;
